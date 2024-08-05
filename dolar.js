@@ -14,7 +14,7 @@ function newLine(label, value, w) {
  let vfont = new Font("Avenir-Book", 15)
 
  line1 = w.addStack()
- line1.setPadding(2, 0, 1, 0)
+ line1.setPadding(1, 0, 1, 0)
  line1.layoutHorizontally()
 
  labelText = line1.addText(label)
@@ -31,7 +31,7 @@ function createWidget(json) {
   
 
  oficial = json['oficial'][1].toString()
- oficial1 = oficial.substring(oficial.indexOf(",")+1,);
+ oficial1 = oficial = oficial.substring(0,oficial.indexOf("."));
  
  blue = json['informal'][1].toString()
  blue1 = blue.substring(blue.indexOf(",")+1,);
