@@ -31,33 +31,33 @@ function createWidget(json) {
   
 
  oficial = json['oficial'][1].toString()
- oficial1 = oficial = oficial.substring(0,oficial.indexOf("."));
- 
+ oficial1 = oficial.substring(0,oficial.indexOf(","));
+ oficial2 = parseInt(oficial1, 10).toString()
+
  blue = json['informal'][1].toString()
- blue1 = blue.substring(blue.indexOf(",")+1,);
+ blue1 = blue.substring(0,blue.indexOf(","));
+ blue2 = parseInt(blue1, 10).toString()
 
-
-
- turista = json['turista'][1].toString()
- turista1 = turista.substring(0,turista.indexOf("."));
+ tarjeta = json['turista'][1].toString()
+ tarjeta1 = parseInt(tarjeta, 10).toString()
  
  mep = json['mep'][1].toString()
-mep1 = mep.substring(0,mep.indexOf("."));
+ mep1 = parseInt(mep, 10).toString()
  
  ccl = json['ccl'][1].toString()
-ccl1 = ccl.substring(0,ccl.indexOf("."));
+ ccl1 = parseInt(ccl, 10).toString()
  
-cripto = json['ccb'][1].toString()
-cripto1 = cripto.substring(0,ccl.indexOf("."));
+ cripto = json['ccb'][1].toString()
+ cripto1 = parseInt(cripto, 10).toString()
 
 
  let w = new ListWidget()
  w.backgroundColor = new Color('#1C1C1E')
 
 
-  newLine("oficial", oficial1, w)
-  newLine("blue", blue1, w)
-  newLine("tarjeta", turista1, w)
+  newLine("oficial", oficial2, w)
+  newLine("blue", blue2, w)
+  newLine("tarjeta", tarjeta1, w)
   newLine("mep", mep1, w)
   newLine("ccl", ccl1, w)
   newLine("cripto", cripto1, w)
