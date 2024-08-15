@@ -22,7 +22,7 @@ function newLine(label, precio, cambio, w) {
     let cambioText = line1.addText(cambio.toString());
     // Change color based on the value of cambio
     if (parseFloat(cambio) > 0) {
-        cambioText.textColor = new Color('#1DCD86'); // Green if positive
+        cambioText.textColor = new Color('##32D25A'); // Green if positive
     } else if (parseFloat(cambio) < 0) {
         cambioText.textColor = new Color('#F71A1B'); // Red if negative
     } else {
